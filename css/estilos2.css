@@ -34,6 +34,7 @@ h1, h2, h3 {
     overflow: hidden;
     border-radius: 50%;
     margin: 0px;
+    border: 2px solid #fff;
 }
 
 .profile_name {
@@ -60,7 +61,7 @@ h1, h2, h3 {
     margin-left: 5%;
 }
 
-.projects_section h2 {
+.main h2 {
     font-family: 'Poppins', sans-serif;
     font-size: 2.0em;
     font-weight: 600;
@@ -72,6 +73,13 @@ h1, h2, h3 {
 
 .projects_section img {
     width: 100%;
+}
+
+.projects_section hr {
+    width: 33%;
+    height: 3px;
+    border: none;
+    background-color: #45484d;
 }
 
 .project {
@@ -105,13 +113,77 @@ h1, h2, h3 {
 
 @media screen and (min-width: 480px) {
 
-    body {
-        background: green;
+    /* ------- LATERAL OR ASIDE ------ */
+    .lateral {
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        width: 350px;
+        background-color: #56B3AB;
+        padding: 1em;
+        height: 100%;
+        box-sizing: border-box;
+        display: block;
     }
 
+    .profile {
+        height: 100%;
+        flex-direction: column;
+        justify-content: flex-start;
 
+    }
+
+    .profile_name {
+        font-size: 1.7em;
+    }
+
+    .info {
+        color: #0F6A62;
+        order: 0;
+        align-self: flex-start;
+        position: absolute;
+        bottom: 50px;
+        text-align: left;
+    }
+
+    .skills {
+        display: inherit;
+        padding: 0px;
+    }
+
+    .skills .skill {
+        background-color: #0F6A62;
+    }
+
+    /* ------- PROJECTS SECTION ------- */
+    .main {
+        margin-left: 350px;
+    }
+
+    .projects_section {
+        display: flex;
+        flex-wrap: wrap;
+        width: auto;
+        margin-left: 0px;
+    }
+
+    .projects_section article:nth-child(2) ul {
+        margin-top: 35px;
+    }
+
+    .project {
+        width: 46%;
+        padding: 2%;
+        margin-bottom: 20px;
+    }
+
+    .project hr {
+        display: none;
+    }
 }
 
+/*
 @media screen and (min-width: 767px) {
 
     body {
@@ -125,3 +197,4 @@ h1, h2, h3 {
         background: blue;
     }
 }
+*/
