@@ -13,7 +13,7 @@ h1, h2, h3 {
 /* ------- LATERAL OR ASIDE ------ */
 .lateral {
     width: 100%;
-    background-color: white;
+/*    background-color: white;*/
     height: 300px;
     display: flex;
     justify-content: center;
@@ -52,6 +52,10 @@ h1, h2, h3 {
 }
 
 .skills {
+    display: none;
+}
+
+.info .icons {
     display: none;
 }
 
@@ -110,6 +114,47 @@ h1, h2, h3 {
     text-transform: uppercase;
 }
 
+.github_link {
+    display: inline-block;
+    font-size: 25px;
+    float: right;
+}
+
+.github_link a {
+    text-decoration: none;
+    color: #29597C;
+}
+
+.github_link a:hover {
+    cursor: pointer;
+    color: #797D7F;
+}
+
+/* ------- FOOTER ------- */
+footer {
+    height: 250px;
+    background-color: #56B3AB;
+}
+
+footer .icons {
+    color: #0F6A62;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+footer .icons .icon {
+    color: white;
+    font-size: 40px;
+    margin-bottom: 14px;
+}
+
+footer .icons span:nth-child(2)
+{
+    margin-bottom: 40px;
+}
 
 @media screen and (min-width: 480px) {
 
@@ -143,7 +188,7 @@ h1, h2, h3 {
         order: 0;
         align-self: flex-start;
         position: absolute;
-        bottom: 50px;
+        bottom: 30px;
         text-align: left;
     }
 
@@ -154,6 +199,17 @@ h1, h2, h3 {
 
     .skills .skill {
         background-color: #0F6A62;
+    }
+
+    .info .icons {
+        display: block;
+    }
+    .info .icons .icon {
+        font-size: 22px
+    }
+
+    .info .icons .icon-mail {
+        margin-left: 30px;
     }
 
     /* ------- PROJECTS SECTION ------- */
@@ -179,6 +235,11 @@ h1, h2, h3 {
     }
 
     .project hr {
+        display: none;
+    }
+
+    /* ------- FOOTER ------- */
+    footer {
         display: none;
     }
 }
